@@ -10,16 +10,30 @@
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
+
 </script>
 <!--- head ends here -->
 <body id="everything">
-<div id="Picture"> <!--- The picture/gif background--->
+<div id="Picture">
+  <div id="buttons"> <!--- For the background changing colour --->
+    <button class="buttontheme button1" onclick="document.body.style.backgroundColor = 'white';">Colour Theme</button>
+    <button class="buttontheme2 button2" onclick="document.body.style.backgroundColor = 'rgb(32,32,32)';">Colour Theme</button>
+  </div>
   <div class='Intro'> <!--- The introduction to the website--->
     <h1> Welcome to Mathmatical equation formula generater! </h1>
   </div>
-
-  <div id="buttontheme">
-  </div>
+</div><!--- The picture/gif background--->
+<div class="forms form1">
+    <form action="/action_page.php"> <!--- FOr the user inputs --->
+      Sepecific #: <input type="text" name="Number"><br>
+      Math formula: <select>
+    <option value="volvo">Quadratic Formula</option>
+    <option value="saab">Pythagorean theorem</option>
+    <option value="opel">Point-Slope line</option>
+      </select>
+      <input type="submit" value="Submit">
+    </form>
+</div>
 </body>
 <!--- body ends here -->
 </html>

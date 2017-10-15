@@ -4,7 +4,7 @@
 
 .Intro {
   width: 75%;
-  height: 17%;
+  height: 15%;
   border-style: solid;
   margin-left: 12%;
   border-radius: 20px;
@@ -22,12 +22,77 @@
   -webkit-box-shadow: inset 0 0 20px #000000;
    box-shadow: inset 0 0 20px #000000;
    /* shadow for the box */
-   height: 75%;
    border-radius: 3%;
+   height: 70%;
+   width: 99%;
+   position: absolute;
 }
-#buttontheme{
-  -moz-appearance: button;
+.buttontheme{
+ border: none;
+ color: white;
+ text-align: center;
+ display: inline-block;
+ font-size: 16px;
+ -webkit-transition-duration: 0.4s; /* for Safari */
+ transition-duration: 0.4s;
+ cursor: pointer;
+ font-family: Roboto, sans-serif;
+ border-radius: 15px;
+ height: 23%;
+ font-size: 92%;
 }
+
+
+.buttontheme2{
+ border: none;
+ color: white;
+ text-align: center;
+ display: inline-block;
+ font-size: 16px;
+ -webkit-transition-duration: 0.4s; /* for Safari */
+ transition-duration: 0.4s;
+ cursor: pointer;
+ font-family: Roboto, sans-serif;
+ border-radius: 15px;
+ font-size: 92%;
+ height: 23%;
+}
+
+.button1 {
+  background-color: #555555;
+  color: White;
+  border: 2px solid #555555;
+}
+.button1:hover {
+  background-color: White;
+  color: Black;
+}
+
+.button2 {
+  background-color: White;
+  color: Black;
+  border: 2px solid #555555;
+}
+.button2:hover {
+  background-color: #555555;
+  color: White;
+}
+.forms{
+  position: absolute;
+  margin-top: 35%;
+  border: solid;
+  width: 30%;
+  font-family: Roboto, sans-serif;
+  color: crimson;
+}
+#buttons {
+  height: 25%;
+  width: 10%;
+  position: absolute;
+  margin-top: 7%;
+  margin-left: 80%;
+}
+
 h1 {
    font-family: 'Dosis', sans-serif;
    text-align: center;
