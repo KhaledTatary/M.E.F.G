@@ -10,7 +10,37 @@
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
-
+function check(maths) {
+  if(maths.selectedIndex === 1) {
+    document.getElementById("other-div").style.display = 'block';
+    document.getElementById("other-div2").style.display = 'none';
+    document.getElementById("other-div3").style.display = 'none';
+  }
+  else if (maths.selectedIndex === 0) {
+    document.getElementById("other-div2").style.display = 'block';
+    document.getElementById("other-div").style.display = 'none';
+    document.getElementById("other-div3").style.display = 'none';
+  }
+  else if(maths.selectedIndex === 2) {
+    document.getElementById("other-div2").style.display = 'none';
+    document.getElementById("other-div").style.display = 'none';
+    document.getElementById("other-div3").style.display = 'block';
+  }
+  else {
+    document.getElementById("other-div").style.display = 'none';
+    document.getElementById("other-div2").style.display = 'none';
+    document.getElementById("other-div3").style.display = 'none';
+  }
+}
+function isNumberKey(evt){
+    let charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
+        return false;
+    return true;
+function calculate(){
+  
+}
+}
 </script>
 <!--- head ends here -->
 <body id="everything">
@@ -23,17 +53,53 @@
     <h1> Welcome to Mathmatical equation formula generater! </h1>
   </div>
 </div><!--- The picture/gif background--->
-<div class="forms form1">
-    <form action="/action_page.php"> <!--- FOr the user inputs --->
-      Sepecific #: <input type="text" name="Number"><br>
-      Math formula: <select>
-    <option value="volvo">Quadratic Formula</option>
-    <option value="saab">Pythagorean theorem</option>
-    <option value="opel">Point-Slope line</option>
+<div id="forms">
+      Math formula: <select id="stuff" onchange="check(this);">
+    <option >Quadratic Formula</option>
+    <option >Pythagorean theorem</option>
+    <option >Point-Slope line</option>
       </select>
-      <input type="submit" value="Submit">
-    </form>
+<div id="other-div" style="display:none;">
+  <label> Enter A value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <label> Enter B value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <input type="submit">
 </div>
+
+<div id="other-div2" style="display:none;">
+  <label> Enter A value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <label> Enter B value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <label> Enter C value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <input type="submit">
+</div>
+
+<div id="other-div3" style="display:none;">
+  <label> Enter X1 value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <label> Enter X2 value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <label> Enter Y1 value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <label> Enter Y2 value
+  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <input type="submit">
+</div>
+
+</div>
+
 </body>
-<!--- body ends here -->
+<!--- body ends here --->
 </html>
