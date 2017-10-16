@@ -79,7 +79,7 @@
 }
 #forms{
   position: absolute;
-  margin-top: 35%;
+  margin-top: 43%;
   border: solid;
   width: 30%;
   font-family: Roboto, sans-serif;
@@ -92,7 +92,13 @@
   margin-top: 7%;
   margin-left: 80%;
 }
-
+#demoDiv{
+  border: solid;
+  width: 15%;
+  margin-top: 43%;
+  margin-left: 48%;
+  position: absolute;
+}
 h1 {
    font-family: 'Dosis', sans-serif;
    text-align: center;

@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:300" rel="stylesheet">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>
+<script type ="text/javascript">
 function check(maths) {
   if(maths.selectedIndex === 1) {
     document.getElementById("other-div").style.display = 'block';
@@ -38,7 +38,8 @@ function isNumberKey(evt){
         return false;
     return true;
 function calculate(){
-  
+  var userInput = document.getElementById("userInput").value;
+  document.getElementById("demo").innerHTML = userInput;
 }
 }
 </script>
@@ -95,9 +96,12 @@ function calculate(){
   <label> Enter Y2 value
   <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
-  <input type="submit">
+  <input type="submit" id="userInput" onclick="calculate()">
 </div>
 
+</div>
+<div id="demoDiv">
+  <p id="demo">sfsdfsdfd </p>
 </div>
 
 </body>
