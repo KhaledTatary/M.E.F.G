@@ -37,11 +37,15 @@ function isNumberKey(evt){
     if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
         return false;
     return true;
-function calculate(){
-  var userInput = document.getElementById("userInput").value;
-  document.getElementById("demo").innerHTML = userInput;
+  }
+function calculatepyth(){
+  var Avalue = document.getElementById("pyth").value;
+  var BValue = document.getElementById("pyth2").value;
+  var total = Math.pow(Avalue, 2) + Math.pow(Bvalue, 2);
+  document.getElementById("result").innerHTML = total;
+
 }
-}
+
 </script>
 <!--- head ends here -->
 <body id="everything">
@@ -56,45 +60,45 @@ function calculate(){
 </div><!--- The picture/gif background--->
 <div id="forms">
       Math formula: <select id="stuff" onchange="check(this);">
-    <option >Quadratic Formula</option>
-    <option >Pythagorean theorem</option>
+    <option >Pythageron theorem</option>
+    <option >Quadratic formula</option>
     <option >Point-Slope line</option>
       </select>
-<div id="other-div" style="display:none;">
+<div id="other-div" style="display:none;"> <!--For quad -->
   <label> Enter A value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+  <input id="quad" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
   <label> Enter B value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
-</label> </br>
-  <input type="submit">
-</div>
-
-<div id="other-div2" style="display:none;">
-  <label> Enter A value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
-</label> </br>
-  <label> Enter B value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+  <input id="quad2" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
   <label> Enter C value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+  <input id="quad3" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
-  <input type="submit">
+  <input type="submit" >
+</div>
+
+<div id="other-div2" style="display:none;"> <!-- For pythageron therom-->
+  <label> Enter A value
+  <input id="pyth" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <label> Enter B value
+  <input id="pyth2" type="number" onkeypress="return isNumberKey(event)"></input>
+</label> </br>
+  <input type="button" onclick="calculatepyth()" value="calculate">
 </div>
 
 <div id="other-div3" style="display:none;">
   <label> Enter X1 value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+  <input id="point" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
   <label> Enter X2 value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+  <input id="point2" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
   <label> Enter Y1 value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+  <input id="point3" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
   <label> Enter Y2 value
-  <input id="other-input" type="number" onkeypress="return isNumberKey(event)"></input>
+  <input id="point3" type="number" onkeypress="return isNumberKey(event)"></input>
 </label> </br>
   <input type="submit" id="userInput" onclick="calculate()">
 </div>
@@ -102,6 +106,9 @@ function calculate(){
 </div>
 <div id="demoDiv">
   <p id="demo">sfsdfsdfd </p>
+</div>
+<div id="resultBox">
+  <p id= "result"> HELLO </p>
 </div>
 
 </body>

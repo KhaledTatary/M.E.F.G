@@ -99,6 +99,11 @@
   margin-left: 48%;
   position: absolute;
 }
+#resultBox {
+  position: absolute;
+  
+
+}
 h1 {
    font-family: 'Dosis', sans-serif;
    text-align: center;
