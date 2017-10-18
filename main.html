@@ -21,7 +21,7 @@ function check(maths) {
     document.getElementById("other-div").style.display = 'none';
     document.getElementById("other-div3").style.display = 'none';
   }
-  else if(maths.selectedIndex === 2) {
+  else if (maths.selectedIndex === 2) {
     document.getElementById("other-div2").style.display = 'none';
     document.getElementById("other-div").style.display = 'none';
     document.getElementById("other-div3").style.display = 'block';
@@ -39,9 +39,9 @@ function isNumberKey(evt){
     return true;
   }
 function calculatepyth(){
-  var Avalue = document.getElementById("pyth").value;
+  var AValue = document.getElementById("pyth").value;
   var BValue = document.getElementById("pyth2").value;
-  var total = Math.pow(Avalue, 2) + Math.pow(Bvalue, 2);
+  var total = Math.pow(AValue, 2) + Math.pow(BValue, 2);
   document.getElementById("result").innerHTML = total;
 
 }
